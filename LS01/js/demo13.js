@@ -6,20 +6,22 @@ var x = 23;
 var foo = function () {
     var x = 34;
     console.log("inside x:",x);//输出多少
+    //34
     y = 45;//加var和不加var的区别
     console.log("inside y:",y);//输出多少
+    //45
 };
 foo();//如果没调用会如何
-console.log("outside x:", x);
-console.log("outside y:", y);
+console.log("outside x:", x);//  23
+console.log("outside y:", y);//  45
 
 
 //预解析和ES5作用域 实例
-console.log(a);//输出什么
+console.log(a);//输出什么    undefind
 if(true){
     var a = 2;
 }
-console.log(a);//输出什么
+console.log(a);//输出什么  2
 
 
 //闭包 具体内容参见 闭包章节
@@ -30,8 +32,9 @@ console.log(a);//输出什么
 (function (x,y) {
     return x>y?x:y;
 }(4,5));
-
+//5
 var result = function min(x,y) {
     return x<y?x:y;
 }(2,3);
 console.log(result);
+//2

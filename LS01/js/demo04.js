@@ -16,6 +16,7 @@ var xx = 234;
 if(234 == xx){ //为什么要反写？？？？？
     console.log("相等");
 }
+//防止丢失一个等号的错误发生
 
 //思考
 console.log(a);
@@ -23,22 +24,35 @@ if(true){
     var a = 2;
 }
 console.log(a);
+//  undefined
+//  2
 
 console.log(b);
 if(false){
     var b = 3;
 }
 console.log(b);
-
+//  undefined
+//  undefined
 
 //循环语句
 for(var i=0;i<3;i++){
     console.log("i:",i);
 }
 console.log(i);//是否会报错，若不报错的话此时i为多少？？？？？
+//不会报错
+//  i:0
+//  i:1
+//  i:2
+//  3
 
 //函数定义及调用   提问：函数有几种定义方式？？？？？
+//三种
+// function 函数名（形参）{}
+// var 函数名=function（形参）{}
+//var 函数名=new Function（‘形参’，‘’）
 function max(x,y) {
     return x>y?x:y;
 }
 console.log(max(2,3));
+//3

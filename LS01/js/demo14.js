@@ -10,24 +10,26 @@ var student = {
         console.log("Hi,i'm",this.name,",i'm",this.age,"years old!");
     }
 };
-console.log(student.name);
-console.log(student["age"]);
-console.log(student.sayHi);
-student.sayHi();
+console.log(student.name);//Jack
+console.log(student["age"]);//23
+console.log(student.sayHi);//function () {console.log("Hi,i'm",this.name,",i'm",this.age,"years old!");}
+student.sayHi();//Hi,i'm Jack ,i'm 23 years old!
 
 //添加属性，删除属性
 student.id = 2015015001;
-console.log(student.id);
+console.log(student.id);//2015015001
 delete  student.id;
-console.log(student.id);
+console.log(student.id);//undefind
 
 //查看对象是否有某个属性 in   for...in   Object.keys()
-console.log("name" in student);
+console.log("name" in student);//   true
 for(var k in student){
-    console.log(k,student[k]);
+    console.log(k,student[k]);//name Jack
+                              //abe 23
+                              //sayHi:function () {console.log("Hi,i'm",this.name,",i'm",this.age,"years old!");}
 }
 console.log(Object.keys(student));
-
+//["name","age","sayHi"]
 //JS对象详细内容参见 JS对象章节
 //函数嵌套 与this问题初步了解
 var obj = {
@@ -53,3 +55,4 @@ Person.prototype.showInfo = function () {
 
 var p1 = new Person("Mike",60);
 p1.showInfo();
+//Hi,i'm Mike ,i'm 60 years old!
