@@ -59,3 +59,4 @@ switch(true){
     default:
         alert('default');
 }
+//弹出框  及格

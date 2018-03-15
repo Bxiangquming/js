@@ -23,6 +23,38 @@ var str = "abc_def_ghi_jkl_mn";
 // str.slice(2,5);
 // str.slice(-2);
 // str.slice(2,-2);
+/*
+var str = "abc_def_ghi_jkl_mn";
+s1=str.split("_");
+s2=str.split("_",2);
+s3=str.concat("_opq");
+s4=str.substr(4,7);
+s5=str.substring(4,7);
+s6=str.slice(2);
+s7=str.slice(2,5);
+s8=str.slice(-2);
+s9=str.slice(2,-2);
+
+console.log(s1);
+console.log(s2);
+console.log(s3);
+console.log(s4);
+console.log(s5);
+console.log(s6);
+console.log(s7);
+console.log(s7);
+console.log(s9);
+
+["abc", "def", "ghi", "jkl", "mn"]
+["abc", "def"]
+abc_def_ghi_jkl_mn_opq
+def_ghi
+def
+c_def_ghi_jkl_mn
+c_d
+c_d
+c_def_ghi_jkl_
+*/
 
 // str.bold();
 // str.link();
