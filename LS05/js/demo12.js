@@ -3,7 +3,7 @@
  */
 console.log("1"+"2"); //"12"
 console.log("1"+2); //"12"
-console.log(1+{}); //"1[object Object]"
+console.log(1+{}); //"1 [object Object]"
 console.log(true+true); //2
 console.log("5"-2); //3
 
