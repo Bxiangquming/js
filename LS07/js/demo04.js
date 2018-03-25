@@ -13,9 +13,10 @@ function foo(x) {
 console.trace("a:",a);
 foo(a);// step 1111
 console.trace("a:",a); // step 4444  a仍为1
-
-
-
+//a:1
+//a:1 x:1
+//a:1 x:2
+//a:1
 //引用传递
 var obj = {x:1};
 function fee(o){
@@ -33,3 +34,7 @@ document.onclick = function () {//测试Event Listener Breakpoints
     alert("click");
     //var body =  document.getElementsByName("body");
 };
+//obj.x : 1
+//obj.x : 1  o.x : 1
+//obj.x : 3  o.x : 3
+//obj.x : 3

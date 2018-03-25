@@ -21,14 +21,14 @@ var obj = {
     }
 };
 obj.test();//调用对象的方法23
-
+//23   {}
 //给obj动态添加方法
 var sayHi = function () {
     console.log("Hi，i'm",this.name);
 };
 obj.sayHi = sayHi;//添加给对象添加方法
 obj.sayHi();
-
+//Hi，i'm obj
 /*
 //思考如下代码 详情参见高阶函数章节
 var fun1 = function () {
@@ -53,8 +53,8 @@ objB = {name:"BB"};
 objA.foo = function(){
     console.log(this.name);
 };
-objA.foo();//AA
-objA.foo.call(objB);//BB
+objA.foo();  //AA
+objA.foo.call(objB);  //BB
 
 //间接调用 实例二 移花接木 吸星大法
 var fish = {
@@ -76,8 +76,11 @@ var me = {
 };
 
 bird.fly(5,6);
+//i'm:polly i can fly ___ 5 6
 fish.swim.call(me,3,4);
+//i'm ABC i cam swim ___ 3 4
 bird.fly.call(me,7,8);
+//i'm:ABC i can fly ___ 7 8
 //swim(1,2);与swim.call(null,1,2);相同
 
 
@@ -86,7 +89,7 @@ function test() {
     console.log(Array.prototype.slice.call(arguments));
 }
 test(1,2,3,"4",5);
-
+//[1, 2, 3, "4", 5]
 
 
 
@@ -98,4 +101,5 @@ Person.prototype.sayHi = function(){
     console.log("Hi,i'm "+this.name);
 };
 var p1 = new Person("Jack");
-p1.sayHi();//Hi,i'm Jack
+p1.sayHi();
+//Hi,i'm Jack
