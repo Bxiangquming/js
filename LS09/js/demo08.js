@@ -3,31 +3,31 @@
  */
 
 // Part 111111111111111111
-console.log(a);
+console.log(a);//undefined
 var a = 1;
-console.log(a);
+console.log(a);//1
 
 //上边代码等价如下 解析器眼中的代码
 var a;
-console.log(a);
+console.log(a);//undefined
 a = 1;
-console.log(a);
+console.log(a);//1
 
 //思考如下代码输出什么 值类型
-console.log(a,b);//输出什么
+console.log(a,b);//输出什么  undefined  undefined
 var b = 23;
-console.log(a,b);//输出什么
+console.log(a,b);//输出什么   undefined  23
 var a = b;
-console.log(a,b);//输出什么
+console.log(a,b);//输出什么   23   23
 
 //思考如下代码输出什么 引用类型
-console.log(obj1,obj2);//输出什么
+console.log(obj1,obj2);//输出什么   undefined undefined
 var obj1 = {x:23};
-console.log(obj1,obj2);//输出什么
+console.log(obj1,obj2);//输出什么   {x: 23} undefined
 var obj2 = obj1;
-console.log(obj1,obj2);//输出什么
+console.log(obj1,obj2);//输出什么   {x: 23} {x: 23}
 obj2.x =25;
-console.log(obj1,obj2);//输出什么
+console.log(obj1,obj2);//输出什么    {x: 25} {x: 25}
 
 
 // Part 22222222222222222
@@ -46,7 +46,8 @@ function foo(){
 function foo(){
     console.log("f_2");
 }
-foo();//f_2
+foo();
+//f_2
 
 
 // Part 33333333333333333 见下一页PPT 同时有var和function的情况一
@@ -61,7 +62,8 @@ var foo = function(){
     console.log("foo");
 };
 foo();//是否会报错
-
+//undefined
+//foo
 
 
 // Part 444444444444444444
@@ -85,3 +87,8 @@ AA = function AA(){
     console.log("AA_2");
 };
 AA();
+//AA();
+//AA_1
+//AA_2
+//AA_2
+//AA_2

@@ -11,7 +11,7 @@ function add(x, y, f) {
 add(2,3,function(x){return x+1;});//
 add(2,-3,Math.abs);//
 add(2,3,Math.sqrt);//2的开平方加3的开平方
-
+//3.14159....
 //实例一  高阶函数一般应用 02
 var word_2 = "do another thing.";
 var function_1=function(callback){
@@ -21,14 +21,15 @@ var function_1=function(callback){
 };
 var function_2=function(){console.log(this.word_2)};
 function_1(function_2);
-
-
+//do something.
+//do another thing.
 // 实例二 数组相关的高阶函数 map reduce filter sort详情参见数组章节
 function pow(x) {
     return x * x;
 }
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-arr.map(pow); // [1, 4, 9, 16, 25, 36, 49, 64, 81]
+arr.map(pow); 
+// [1, 4, 9, 16, 25, 36, 49, 64, 81]
 
 
 //将数组所有元素改为数字类型
@@ -38,19 +39,21 @@ var result = ["1", "2", "3"].map(function(val) {
 for (var i=0;i<result.length;i++){
     console.log(typeof result[i]);
 }
-
+//number
 //reduce 相当于 [x1, x2, x3, x4].reduce(f) = f(f(f(x1, x2), x3), x4)
 var arr = [1, 3, 5, 7, 9];
 arr.reduce(function f(x, y) {
     return x + y;
-}); // 25
+}); 
+// 25
 
 //filter 数组过滤 ，返回为false的将被过滤掉
 var arr = [1, 2, 4, 5, 6, 9, 10, 15];
 var r = arr.filter(function (x) {
     return x % 2 !== 0;
 });
-r; // [1, 5, 9, 15]
+r; 
+// [1, 5, 9, 15]
 
 // sort 排序
 var arr = [10, 20, 1, 2];
@@ -62,7 +65,8 @@ arr.sort(function (x, y) {
         return 1;
     }
     return 0;
-}); // [1, 2, 10, 20]
+});
+ // [1, 2, 10, 20]
 
 
 //实例三 常用回调函数 设置超时和时间间隔的方法、异步请求、事件监听和处理
@@ -106,5 +110,5 @@ var fun1 = function () {
 obj.fun3 = fun1;
 obj.fun4 = fun1();
 console.log(obj.fun3());//输出什么
-console.log(obj.fun3()());//输出什么
-console.log(obj.fun4());//输出什么
+console.log(obj.fun3()());//输出什么  undefined
+console.log(obj.fun4());//输出什么  23

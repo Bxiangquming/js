@@ -6,14 +6,18 @@ if(true){
 }
 
 function foo(){
-    console.log("j:",j);//undefined
+    console.log("j:",j);
+    //undefined
     var j = 10;
-    console.log("j:",j);//10
+    console.log("j:",j);
+    //10
 }
 foo();
 
-console.log("i:",i);//0
-console.log("j:",j);//报错
+console.log("i:",i);
+//0
+console.log("j:",j);
+//报错
 
 //上边代码等价于
 var i;
@@ -23,11 +27,15 @@ if(true){
 
 function foo(){
     var j;
-    console.log("j:",j);//undefined
+    console.log("j:",j);
+    //undefined
     j = 10;
-    console.log("j:",j);//10
+    console.log("j:",j);
+    //10
 }
 foo();
 
-console.log("i:",i);//0
-console.log("j:",j);//报错
+console.log("i:",i);
+//0
+console.log("j:",j);
+//报错

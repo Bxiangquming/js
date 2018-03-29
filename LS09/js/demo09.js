@@ -11,7 +11,7 @@ function foo() {
     echo();
 }
 foo();//Bill or Jack
-
+//Jack
 
 
 
@@ -23,7 +23,8 @@ var f1 = function () {
 };
 f1();
 console.log(x);
-
+//outside f1
+//outside f1
 
 //若函数内未加var 则相当于创建了全局变量
 var f2 = function () {
@@ -33,7 +34,8 @@ var f2 = function () {
 };
 f2();
 console.log(y);//若函数内有var此行报错，若函数内没有var则此行输出全局变量y值
-
+//局部
+//报错
 //ES5中无块作用域
 if(true){
     var z = 23;
@@ -46,3 +48,5 @@ if(true){
     }());           //IIFE end
 }
 console.log(z);//报错
+//23
+//23

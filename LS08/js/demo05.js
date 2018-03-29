@@ -34,4 +34,13 @@ console.log(Math instanceof Object);
 console.log(Math instanceof Function);
 console.log(JSON instanceof Function);
 console.log(JSON instanceof Object);
-
+//true
+//true
+//true
+//true
+//true
+//true
+//true
+//false
+//false
+//true

@@ -12,8 +12,8 @@ var foo = function (a,b){
     console.log(args);
 };
 foo(1,2,3,4);
-
-
+//4
+//[1, 2, 3, 4]
 //函数对象属性之length 形参个数
 function checkVarCount(a, b) {
     if (checkVarCount.length !== arguments.length) {
@@ -63,8 +63,8 @@ var obj = {
 };
 obj.foo1();
 obj.foo2();
-
-
+//null
+//f abc(){}
 
 //函数对象属性之callee 返回正被执行的 Function 对象，即指定的 Function 对象的正文
 //callee 属性是 arguments 对象的一个成员，该属性仅当相关函数正在执行时才可用。通常这个属性被用来递归调用匿名函数
@@ -73,10 +73,10 @@ var func = function(n){
         return 1;
     else
         return n * func(n - 1);
-        //return n * arguments.callee(n - 1);
+        //return n * arguments.callee(n - 1);//24
 };
 console.log(func(4));
-
+//24
 //优点，可以是匿名函数
 (function(n){
     if (n <= 0)
@@ -84,7 +84,7 @@ console.log(func(4));
     else
         return n * arguments.callee(n - 1);
 }(4));
-
+//24
 
 //函数对象属性之 constructor 获取创建某个对象的构造函数。可以用来判断对象是哪一类
 var x = new String("Hello");
@@ -99,8 +99,8 @@ var y = new MyObj();
 if (y.constructor == MyObj){
     console.log("Object constructor is MyObj.");
 }
-
-
+//Object is a String.
+//Object constructor is MyObj.
 
 //函数对象属性之 prototype
 //获取对象的原型。每一个构造函数都有一个prototype属性，指向另一个对象。
@@ -120,6 +120,9 @@ console.log(li.sex);//M
 Man.prototype.isStrong = true;
 console.log(li.isStrong);//true
 
+//Hi,i'm Leo
+//M
+//true
 
 
 // Part 222222222222222222222222222222222222222222222222222222222
@@ -142,20 +145,20 @@ var bird = {
 var me = {
     name:"ABC"
 };
-swim(1,2);
-swim.call(me,3,4);
-bird.fly(5,6);
-bird.fly.call(me,7,8);
-bird.fly.apply(me,[7,8]);
+swim(1,2);//i'm: i can swim ___ 1 2
+swim.call(me,3,4);//i'm:ABC i can swim ___ 3 4
+bird.fly(5,6);//i'm:polly i can fly ___ 5 6
+bird.fly.call(me,7,8);//i'm:ABC i can fly ___ 7 8
+bird.fly.apply(me,[7,8]);//i'm:ABC i can fly ___ 7 8
 //swim(1,2);与swim.call(null,1,2);相同同
 
 
 //函数对象方法之 apply
 //functionName.apply([thisObj[,argArray]])
 //与call方法不同的地方是，apply的第二个参数类型必须是Array
-swim.apply(me,[9,10]);
-bird.fly.apply(me,[11,12]);
-swim.apply(null,[13,14]);//同swim(13,14)
+swim.apply(me,[9,10]);//i'm:ABC i can swim ___ 9 10
+bird.fly.apply(me,[11,12]);//i'm:ABC i can fly ___ 11 12
+swim.apply(null,[13,14]);//同swim(13,14)  i'm: i can swim ___ 13 14
 
 
 
@@ -198,7 +201,7 @@ var displayArgs2 = displayArgs.bind(emptyObject, 12, "a");
 // as the third and fourth parameters.
 displayArgs2("b", "c");// Output: 12 a b c
 
-
+//12 a b c
 
 //函数对象方法之 toString与valueOf 继承自Object.prototype的方法
 //返回对象的字符串表示形式。objectname.toString([radix])
@@ -215,4 +218,13 @@ console.log(Object.prototype.hasOwnProperty("toString"));
 console.log(foo.hasOwnProperty("valueOf"));
 console.log(Object.prototype.hasOwnProperty("valueOf"));
 //关于toString与valueOf的详细内容参见JS对象相关章节
-
+//function () {
+//    console.log("foo");
+//}  ___  string
+//ƒ () {
+//    console.log("foo");
+//} " ___ " "function"
+//false
+//true
+//false
+//true
