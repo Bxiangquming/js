@@ -21,10 +21,9 @@ function goToBank(){
 console.log("在家-做作业中 2 ...全局上下文 发现笔没油了");
 goToStore();//笔没油了，去商店买笔
 console.log("在家-继续做作业...全局上下文");
-
-
-
-/*
+//
+//
+//
 //理解执行上下文（通俗的例子）,嵌套的情况
 var xx = "小明家中（书桌-书包-铅笔盒-...）";
 console.log("在家-做作业中 1 ...");
@@ -42,4 +41,3 @@ function goToStore(){
 console.log("在家-做作业中 2 ... 发现笔没油了");
 goToStore();//笔没油了，去商店买笔
 console.log("在家-继续做作业...");
-*/

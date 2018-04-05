@@ -19,5 +19,5 @@ function fn() {
 }
 fn();
 //console.log(a,b,c,d);
-
+//500 20 200 600
 
