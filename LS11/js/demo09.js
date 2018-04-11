@@ -19,7 +19,7 @@ for(var i=0;i<tabs.length;i++) {
 }
 
 
-/*
+
 //解决方案 IIFE 重新打开index09.html页面测试
 var tabs = document.getElementsByClassName('tabs')[0].children;
 var contents = document.getElementsByClassName('show')[0];
@@ -35,4 +35,4 @@ for(var i=0;i<tabs.length;i++) {
         };
     }(i));			//IIFE end
 }
-*/
+

@@ -11,6 +11,9 @@
     console.log("the min is",x<y?x:y);
 })(2,3);
 
+//the max is 3
+//the min is 2
+
 // 其他形式的IIFE 与运算符结合的写法
 var i = function(){
     return 10;
@@ -20,10 +23,10 @@ var i = function(){
 true && function(a,b){
     return a>b?a:b;
 }(5,9);
-
+//9
 
 !function(x,y){
     return x==y?true:false; // === 返回什么
 }("5",5);
-
+//false
 //思考 !function(){return 2; }( ); 与 !function(){return 0; }();

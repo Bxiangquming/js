@@ -1,7 +1,7 @@
 /**
  * Created by qile on 2017/8/30.
  */
-/*
+
 //文件内的变量污染问题,尤其是异步执行的情况下
 var userId = 123;
 document.onclick = function () {
@@ -16,7 +16,7 @@ document.onclick = function () {
         var userId = 234;
     }
 }());
-*/
+
 
 
 
@@ -25,6 +25,6 @@ document.onclick = function () {
     var x = 10;
     document.onclick = function () {
         // console.log("x = ",x);
-        alert("x = "+x);
+        alert("x = "+x);  
     };
 //})();           // IIFE结束
