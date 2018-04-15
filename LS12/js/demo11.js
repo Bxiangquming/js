@@ -1,7 +1,7 @@
 /**
  * Created by qile on 2017/8/14.
  */
-/*
+
 function foo() {
     var i = 0;
     function bar() {
@@ -11,8 +11,8 @@ function foo() {
 }
 foo();
 foo();
-*/
-
+//1
+//1
 // 例一
 function foo() {
     var i = 0;
@@ -26,7 +26,7 @@ var b = foo();
 a();//1
 a();//2
 b();//1
-/*
+
 // 例二
 var scope = "global scope";
 function checkScope() {
@@ -37,5 +37,5 @@ function checkScope() {
     return f;
 }
 checkScope()();//输出什么
-*/
+//local scope
 //查看JavaScript权威指南（第6版）184页中的描述

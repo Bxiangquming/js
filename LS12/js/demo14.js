@@ -9,8 +9,8 @@ function f1(){
     return f2;
 }
 var f = f1();
-f();//输出多少？
-f();//输出多少？
+f();//输出多少？   1000
+f();//输出多少？   1001
 
 
 // 闭包实例
@@ -31,7 +31,8 @@ var result=f1();
 result(); // 输出多少？
 nAdd();
 result(); // 输出多少？
-
+//999
+//1000
 
 ////////闭包 应用案例 实现数据的封装 私有属性
 function Person(){
@@ -54,6 +55,10 @@ var jack = Person();
 console.log(jack.getName());
 jack.setName("jack");
 console.log(jack.getName());
+//default
+//john
+//default
+//jack
 
 /////
 var m = 10;
@@ -69,7 +74,7 @@ var result2=f1();
 document.onclick = result1; // 输出多少？
 nAdd();
 result2(); // 输出多少
-
+//11
 
 //////
 var m = 10;
@@ -86,3 +91,6 @@ result1(); // 输出多少？
 nAdd();
 result2(); // 输出多少
 result1();
+//10
+//11
+//11
