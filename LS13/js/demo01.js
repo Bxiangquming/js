@@ -14,3 +14,16 @@ console.log(obj.str);//Hi
 obj.show();			 //Hi
 
 //练习：写一个JS对象，包括自己的姓名、年龄，和一个方法，调用这个方法
+/*
+var obj = {
+    name:"guojiahao",
+    age:20,
+    show:function(){
+        console.log("我的名字是"+this.name+"年龄是"+this.age);
+    }
+};
+obj.show();	
+
+
+我的名字是guojiahao年龄是20
+*/

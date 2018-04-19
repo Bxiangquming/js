@@ -3,12 +3,12 @@
  */
 var obj = {};
 obj.x = 2;//直接添加属性
-console.log(obj.x);//通过.访问属性
-obj.x = 5;//设置属性
-console.log(obj["x"]);//通过[]访问属性
+console.log(obj.x);//通过.访问属性   2
+obj.x = 5;//设置属性 
+console.log(obj["x"]);//通过[]访问属性   5
 delete obj.x;//删除属性
 console.log(obj.x);
-
+//undefind
 //访问属性的for循环练习
 var obj2 = {
     id_1:2,
@@ -23,8 +23,9 @@ var obj3 = {};
 for(var i=0;i<10;i++){
     obj3.i = i;
 }
-
+//9
 var obj4 = {};
 for(var i=0;i<10;i++){
     obj4[i] = i;
 }
+//9
