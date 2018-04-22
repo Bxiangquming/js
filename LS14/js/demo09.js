@@ -11,7 +11,9 @@ obj.z = 3;
 for(var k in obj){
     console.log(k,obj[k]);
 }
-
+//x 1
+//y 2
+//z 3
 //Part 2222222222222222
 
 var obj = {
@@ -26,7 +28,11 @@ Object.defineProperty(obj,"w",{value:456,configurable:true});//writable,enumerab
 for(var k in obj){
     console.log(k,obj[k]);
 }
-//console.log(obj.w);//有w，但上边for...in遍历不到
+//x 1
+//y 2
+//z 3
+//console.log(obj.w);//有w，但上边for...in遍历不到  
+//456
 
 
 //通过属性特性描述符来查看某一对象属性的特性

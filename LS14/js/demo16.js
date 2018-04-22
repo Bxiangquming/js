@@ -16,7 +16,8 @@ empty2 = Object.create({},{
     }
 });
 console.log(Object.isExtensible(empty2));
-
+//true
+//true
 
 //////////Object.isExtensible和Object.preventExtensions实例////////
 (function () {
@@ -49,7 +50,9 @@ console.log(Object.isExtensible(empty2));
     Object.defineProperty(empty,"a",{value : 2});
     console.log(empty.a);//输出2
 })();
-
+//true
+//true
+//falsr
 
 //Part 2 JS对象是否密封 isSealed
 //如果对象不可扩展，且所有属性的可配置特性为false，则该对象为密封的对象
@@ -71,6 +74,10 @@ console.log(Object.isExtensible(empty2));
     Object.defineProperty(hasProp,"fee",{configurable : false});
     console.log(Object.isSealed(hasProp));//true
 })();
+//false
+//true
+//false
+//true
 
 //////////Object.isSealed和Object.seal实例////////
 (function () {
@@ -108,6 +115,9 @@ console.log(Object.isExtensible(empty2));
     Object.defineProperty(obj,"foo",{value : "eit"});//修改成功
     console.log(obj.foo);//“eit”
 })();
+//true
+//true
+//eit
 
 ////Part 3 JS对象是否冻结 isFrozen
 //如果对象不可扩展，所有属性的可配置特性为false，

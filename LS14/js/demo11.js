@@ -13,3 +13,6 @@ person.name = "Lucy";
 console.log(person.name);
 delete person.name;//delete person.name;
 console.log(person.name);
+//Jack
+//Lucy
+//Lucy
