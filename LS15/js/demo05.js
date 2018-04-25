@@ -10,10 +10,10 @@ Person.prototype.sayHi = function () {
 };
 
 var p1 = new Person("Mike");
-console.log(p1.name);
-console.log(p1.age);
+console.log(p1.name);//Mike
+console.log(p1.age);//21
 p1.sayHi();
-
-console.log(p1.__proto__ === Person.prototype);
+//Hi,i'm  Mike 21 years old!
+console.log(p1.__proto__ === Person.prototype);//true
 
 

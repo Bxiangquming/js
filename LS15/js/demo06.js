@@ -19,14 +19,14 @@ console.log(obj.hasOwnProperty("z"));//false
 obj.z = 5;
 
 obj.hasOwnProperty("z");
-console.log(obj.z);
-console.log(MyObj.prototype.z);
+console.log(obj.z);//5
+console.log(MyObj.prototype.z);//3
 
 obj.z = 8;
-console.log(obj.z);
+console.log(obj.z);//8
 
 delete obj.z;//true
-console.log(obj.z);
+console.log(obj.z);//3
 
 delete obj.z;//true
 console.log(obj.z);//still 3
