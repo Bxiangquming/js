@@ -36,12 +36,12 @@ BaseClass.prototype.method1 = function(){
     console.log("1 This is a instance method ");
 };
 var instance1 = new BaseClass();
-instance1.method1();//This is a instance method
+instance1.method1();//1 This is a instance method
 
 instance1.method1 = function(){
     console.log("2 This is a instance method too ");
 };
-instance1.method1();//This is a instance method too 覆盖了原型的方法
+instance1.method1();//2 This is a instance method too 覆盖了原型的方法
 
 
 // 思考下述实例
@@ -58,5 +58,5 @@ instance1.method1 = function(){
 BaseClass.prototype.method1 = function(){
     console.log('3 Defined by the prototype instance method ');
 };
-instance1.method1();//Defined directly in the instance method
+instance1.method1();//2 Defined directly in the instance method
 */

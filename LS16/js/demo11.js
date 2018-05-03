@@ -7,6 +7,7 @@
 function Foo() {}
 var f = new Foo();
 console.log(f.constructor.name);
+//Foo
 
 // 2 创建相似对象
 function Constr(name) {
@@ -16,6 +17,8 @@ var x = new Constr("Jack");
 var y = new x.constructor("Mike");
 console.log(y);
 console.log(y instanceof Constr);
+//Constr {name: "Mike"}
+//true
 
 // 3 constructor可用于指定构造函数
 function Person(area){
@@ -48,7 +51,8 @@ var a = new A(123);
 console.log(a.publicId);
 // console.log(a.privateId);
 a.getId();
-
+//123
+//123 456
 
 //补充：Shape 多态
 
@@ -67,4 +71,5 @@ function B(){
 }
 B.prototype.__proto__ = A.prototype;
 var b = new B();
+//{constructor: ƒ}
 */

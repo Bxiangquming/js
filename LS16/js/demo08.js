@@ -31,7 +31,11 @@ s1.name = "Bill";
 s1.age = 22;
 s2.name = "Colin";
 s2.age = 23;
-
+//Mike 22 2017001
+//Mike 22 2017002
+//Jack
+//99
+//23
 
 /*
  //通过Object.create创建的对象的原型共享问题
