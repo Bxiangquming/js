@@ -14,7 +14,7 @@ for(var row=0;row<table.length;row++){
 }
 var product = table[2][4];
 console.log(table);
-
+//[Array(5), Array(5), Array(5), Array(5), Array(5)]
 
 
 
@@ -28,3 +28,4 @@ for(var i=0;i<table.length;i++){
 }
 var product = table[2][4];
 console.log(table);
+//[Array(5), Array(5), Array(5), Array(5), Array(5)]

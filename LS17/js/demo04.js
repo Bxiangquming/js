@@ -7,3 +7,4 @@ function Point(x,y) {
 }
 var p = new Point(2,3);
 console.log(p);
+//Point {x: 2, y: 3}

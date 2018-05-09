@@ -10,7 +10,8 @@ for(var i=0;i<arr2.length;i++){arr2[i] = i;}
 
 var arr3 = new Array(1,2,3,4);//多个参数
 console.log(arr1,arr2,arr3);
-
+//[empty × 5]
+//(4) [1, 2, 3, "4"] (5) [0, 1, 2, 3, 4] (4) [1, 2, 3, 4]
 //数组直接量中的值不一定要是常量，可以是任意的表达式
 var base = 1024;
 var table = [base,base+1,base+2,base+3];
@@ -22,12 +23,12 @@ var a1 = [1,2,3];
 var a2 = a1;
 a2.length = 0;
 console.log(a1,a2);
-
+//[]   []
 var a3 = [1,2,3];
 var a4 = a3;
 a4 = [];
 console.log(a3,a4);
-
+//[1, 2, 3]    []
 
 //Error
 function idLog(x){
@@ -42,6 +43,7 @@ function idLog(x){
     }
 }
 idLog(123);
+//222
 
 //使用map和reduce来实现，数组求平均值和标准差
 //不用map和reduce的写法
@@ -57,7 +59,7 @@ for(var i=0;i<data.length;i++){
     total+=deviation*deviation;
 }
 var stddev = Math.sqrt(total/(data.length-1));
-
+//16
 
 //使用map和reduce的写法
 var data = [1,1,3,5,5];
@@ -72,6 +74,7 @@ total = tempArr.map(square).reduce(function (x,y) {
     return x+y;
 });
 var stddev = Math.sqrt(total/(data.length-1));
+//16
 
 //使用map和reduce的精简写法
 var data = [1,1,3,5,5];
@@ -82,7 +85,7 @@ total = tempArr.map(function(x) {return x*x;}).reduce(function (x,y) {
     return x+y;
 });
 var stddev = Math.sqrt(total/(data.length-1));
-
+//16
 /*
 //使用ES6中的箭头函数，会更为精简，详细内容参见ES6部分
 var data = [1,1,3,5,5];
@@ -91,4 +94,5 @@ var tempArr = data.map((x)=>{return x-average;});
 total = 0;
 total = tempArr.map((x)=>{return x*x;}).reduce((x,y)=>{return x+y;});
 var stddev = Math.sqrt(total/(data.length-1));
+16
 */

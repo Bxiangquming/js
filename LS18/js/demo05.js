@@ -22,6 +22,9 @@ function foo(){
     console.log(Array.prototype.pop.call(arguments));
 }
 foo(3,2,5);
+//true
+//false
+//5
 
 //Part2  数组添加删除元素的原型方法 破坏性
 //Array.prototype.shift
@@ -43,12 +46,17 @@ var arr3 = ["a","b"];
 var arr4 = ["c","d"];
 Array.prototype.push.apply(arr3,arr4);
 console.log(arr3);
+//[3, 5, 7]
+//[1, 2, 3, 5, 7]
+//[1, 2, 3, 5]
+//[1, 2, 3, 5, 77, 88]
+//["a", "b", "c", "d"]
 
 //splice 从start开始，移除deleteCount个元素，并插入给定的元素
 var arr5 = ["a","b","c","d"];
 var spliceElements = arr5.splice(1,2,"x");//返回切掉的数组
 console.log(spliceElements,arr5);
 //思考start若是负数则返回什么？：arr5.splice(-2,2,"x");
-
+//["b", "c"]   ["a", "x", "d"]
 
 

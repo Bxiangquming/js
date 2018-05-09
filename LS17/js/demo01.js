@@ -5,7 +5,7 @@ function thisTest(){
     console.log(this === window);
 }
 thisTest();
-
+//true
 
 var a = 10;b = "Hi";
 function thisTest2(){
@@ -15,7 +15,7 @@ function thisTest2(){
 }
 thisTest2();
 console.log(a,c);
-
+//20 "新添加属性"
 
 /*
  var point = {

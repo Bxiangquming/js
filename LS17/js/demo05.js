@@ -24,3 +24,5 @@ var me = {
 };
 bird.fly(5,6);
 bird.fly.call(me,7,8);
+//i'm:polly i can fly ___ 5 6
+//i'm:QL i can fly ___ 7 8

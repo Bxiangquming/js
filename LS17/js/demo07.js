@@ -19,7 +19,7 @@ function Point(x,y) {
 var p = new Point(2,3);
 p.moveXY(1,1);
 console.log(p);//输出为Point{x:2,y:3}没有移动
-
+//{x:2,y:3}
 
 
 // Part2 构造函数中函数嵌套 this缺陷 解决方案
@@ -41,3 +41,4 @@ function Point(x,y) {
 var p = new Point(2,3);
 p.moveXY(1,1);
 console.log(p);//输出为Point{x:3,y:4}，移动了(1,1)
+//{x:3,y:4}

@@ -21,7 +21,8 @@ var point = {
 point.moveTo(2,2);
 console.log(point);
 //console.log(window.x,window.y);
-
+//{x: 0, y: 0, moveTo: ƒ}
+//2 2 
 
 // Part2 方法中函数嵌套 this缺陷 解决办法
 var point = {
@@ -44,6 +45,7 @@ var point = {
 point.moveTo(2,2);
 console.log(point);
 //console.log(window.x,window.y);
+//{x: 2, y: 2, moveTo: ƒ}
 
 //通过call和apply来解决
 var point = {
@@ -60,3 +62,4 @@ var point = {
     }
 };
 point.moveTo(2,2);console.log(point);//2,0
+//{x: 2, y: 0, moveTo: ƒ}

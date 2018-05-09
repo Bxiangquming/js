@@ -11,4 +11,4 @@ var point = {
 };
 point.moveTo(1,1);//this绑定到当前对象，即point对象上
 console.log(point);
-
+//{x: 1, y: 1, moveTo: ƒ}
