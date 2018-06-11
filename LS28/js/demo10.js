@@ -4,30 +4,31 @@
 //对象的解构赋值
 var { foo1, bar1 } = { foo1: "aaa", bar1: "bbb" };
 console.log(foo1,bar1);
-
+//aaa bbb
 // 对象的解构与数组有一个重要的不同。\
 // 数组的元素是按次序排列的，变量的取值由它的位置决定
 // 而对象的属性没有次序，变量必须与属性同名，才能取到正确的值
 var { bar2, foo2 } = { foo2: "ccc", bar2: "ddd" };//顺序不同，没关系
 console.log(foo2,bar2);
-
+//ccc ddd
 var { baz3 } = { foo3: "ccc", bar3: "ddd" };
 console.log(baz3);
-
+//undefined
 ////////////////////////////////////////////////////
 //左侧为键值对时,注意键值对赋值时的对应关系
 var { foo4: baz4 } = { foo4: 'aaa', bar4: 'bbb' };
-console.log(baz4);// "aaa"
+console.log(baz4);
+// "aaa"
 
 ////////////////////////////////////////////////////
 let obj1 = { first: 'hello', last: 'world' };
 
 let { first: f, last: l } = obj1;
 console.log(f,l);//注意和下边写法的区别
-
+//hello world
 let { first, last } = obj1;
 console.log(first,last);
-
+//hello world
 ////////////////////////////////////////
 //这实际上说明，对象的解构赋值是下面形式的简写（参见《对象的扩展》一章）。
 var { foo5: foo5, bar5: bar5 } = { foo5: "aaa", bar5: "bbb" };
@@ -50,7 +51,7 @@ var { p: [x, { y }] } = obj2;
 console.log(x); // "Hello"
 console.log(y); // "World
 //思考console.log(p);是正常输出还是报错？
-
+//报错
 ///
 var node = {
     loc: {
@@ -61,7 +62,8 @@ var node = {
     }
 };
 var { loc: { start: { line }} } = node;
-line // 1
+line 
+// 1
 //loc // error: loc is undefined
 //start // error: start is undefined
 //上面代码中，只有line是变量，loc和start都是模式，不会被赋值。

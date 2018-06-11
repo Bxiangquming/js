@@ -3,16 +3,16 @@
  */
 // ES6中 let和const 不进行变量提升特性
 //var 声明变量
-console.log(a);
+console.log(a);//undefined
 var a = 1;
 console.log(a);
-
+//1
 //预解析 上述代码等效于
 var a;
-console.log(a);
+console.log(a);//undefined
 a = 1;
 console.log(a);
-
+//1
 //思考下述代码输出什么？理解ES5中，是否有块作用域，是否有函数作用域，如何理解下述代码
 var temp = new Date();
 function f() {
@@ -27,7 +27,7 @@ f();
 console.log(a);//报错
 let a = 2;
 console.log(a);
-
+//2
 
 
 
