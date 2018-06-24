@@ -46,13 +46,14 @@ new Map().get('asfddfsasadf');
 //要特别注意
 var map = new Map();
 map.set(['a'], 555);
-map.get(['a']); // undefined
+map.get(['a']);
+ // undefined
 
 //思考：
 var map = new Map();
 map.set('a', 555);
 map.get('a'); // 输出什么？
-
+//555
 //
 var map = new Map();
 var k1 = ['a'];
@@ -80,7 +81,8 @@ map.get(+0); // 123
 let map = new Map();
 map.set('foo', true);
 map.set('bar', false);
-map.size // 2
+map.size 
+// 2
 
 var m = new Map();
 m.set("edition", 6); // 键是字符串

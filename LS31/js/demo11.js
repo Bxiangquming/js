@@ -17,10 +17,14 @@ typeof s;// "symbol"
 //Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分。
 var s1 = Symbol('foo');
 var s2 = Symbol('bar');
-console.log(s1); // Symbol(foo)
-console.log(s2); // Symbol(bar)
-console.log(s1.toString()); // "Symbol(foo)"
-console.log(s2.toString()); // "Symbol(bar)"
+console.log(s1);
+ // Symbol(foo)
+console.log(s2); 
+// Symbol(bar)
+console.log(s1.toString()); 
+// "Symbol(foo)"
+console.log(s2.toString());
+ // "Symbol(bar)"
 
 
 //Part2222222222222222222
@@ -28,18 +32,22 @@ console.log(s2.toString()); // "Symbol(bar)"
 // 没有参数的情况
 var s1 = Symbol();
 var s2 = Symbol();
-s1 === s2 // false
+s1 === s2 
+// false
 // 有参数的情况
 var s1 = Symbol("foo");
 var s2 = Symbol("foo");
-s1 === s2 // false
+s1 === s2 
+// false
 
 //Symbol值不能与其他类型的值进行运算，会报错。
 var sym = Symbol('My symbol');
 //"your symbol is " + sym;//报错
 //但是，Symbol值可以显式转为字符串。
 var sym = Symbol('My symbol');
-String(sym); // 'Symbol(My symbol)'
-sym.toString(); // 'Symbol(My symbol)'
+String(sym);
+ // 'Symbol(My symbol)'
+sym.toString(); 
+// 'Symbol(My symbol)'
 
 

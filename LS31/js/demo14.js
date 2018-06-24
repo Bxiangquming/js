@@ -9,7 +9,8 @@ var s2 = new Set();
 [2, 3, 5, 4, 5, 2, 2].map(x => s2.add(x));
 for (var i of s2) {
     console.log(i);
-}// 2 3 5 4
+}
+// 2 3 5 4
 
 //
 // 例一
@@ -18,7 +19,8 @@ console.log([...set]);
 // [1, 2, 3, 4]
 // 例二
 var items = new Set([1, 2, 3, 4, 5, 5, 5, 5]);
-console.log(items.size); // 5
+console.log(items.size);
+ // 5
 
 // 去除数组的重复成员
 [...new Set([1,2,3,3])];
@@ -27,9 +29,11 @@ console.log(items.size); // 5
 //区分基本类型和引用（对象）类型，两个对象总是不相等的，思考下述代码
 var set = new Set();
 set.add({});
-console.log(set.size); // 1
+console.log(set.size); 
+// 1
 set.add({});
-console.log(set.size); // 2
+console.log(set.size);
+ // 2
 
 
 //Part 22222222222222222222222222222222222222222222222
@@ -50,7 +54,8 @@ console.log(properties.size);
 if (properties.has('width')&&properties.has('height')) {
     console.log("do something!");
 }
-
+//2
+//do something!
 //Array.from方法可以将Set结构转为数组。
 var items = new Set([1, 2, 3, 4, 5]);
 var array = Array.from(items);

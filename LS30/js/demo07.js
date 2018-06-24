@@ -21,7 +21,9 @@ var point = {
 };
 point.moveTo(2,2);
 console.log(point);
+//{x: 0, y: 0, moveTo: ƒ}
 //console.log(window.x,window.y);
+//2 2
 
 
 // Part2 方法中的函数嵌套 this缺陷 ES5中通过软绑定解决办法
@@ -44,7 +46,9 @@ var point = {
 };
 point.moveTo(2,2);
 console.log(point);
+//{x: 2, y: 2, moveTo: ƒ}
 //console.log(window.x,window.y);
+//undefined  undefined
 
 //思考并回顾：如何用call或apply间接调用的方法解决this指向问题？？？
 
@@ -65,6 +69,7 @@ var point = {
 point.moveTo(2,2);
 console.log(point);
 //console.log(window.x,window.y);
+//undefined  undefined
 
 //
 // 箭头函数有几个使用注意点。
@@ -80,7 +85,8 @@ function foo() {
     }, 100);
 }
 var id = 21;
-foo.call({ id: 42 });// id: 21
+foo.call({ id: 42 });
+// id: 21
 
 //查看下例中箭头函数的写法和结果
 function foo() {
@@ -89,7 +95,8 @@ function foo() {
     }, 100);
 }
 var id = 21;
-foo.call({ id: 42 });// id: 42
+foo.call({ id: 42 });
+// id: 42
 
 //由于箭头函数没有自己的this，所以当然也就不能用call()、apply()、bind()这些方法去改变this的指向
 function foo() {
@@ -102,9 +109,12 @@ function foo() {
     };
 }
 var f = foo.call({id: 1});
-var t1 = f.call({id: 2})()(); // id: 1
-var t2 = f().call({id: 3})(); // id: 1
-var t3 = f()().call({id: 4}); // id: 1
+var t1 = f.call({id: 2})()();
+ // id: 1
+var t2 = f().call({id: 3})();
+ // id: 1
+var t3 = f()().call({id: 4});
+ // id: 1
 
 //////////////////////////////////////////////////////////////////
 //需要特别注意：由于大括号被解释为代码块，所以如果箭头函数直接返回一个对象，必须在对象外面加上小括号

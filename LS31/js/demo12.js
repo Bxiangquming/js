@@ -18,7 +18,8 @@ var a = {
 var a = {};
 Object.defineProperty(a, mySymbol, { value: 'Hello!' });
 // 以上写法都得到同样结果
-a[mySymbol] // "Hello!"
+a[mySymbol] 
+// "Hello!"
 
 
 
@@ -29,15 +30,15 @@ var obj = {
 };
 Object.defineProperty(obj, Symbol("abc"), { value: 'World!' });
 console.log(obj);//思考obj对象有几个属性？
-
+//{Symbol(abc): "Hello!", Symbol(abc): "World!"}
 //Part22222222222222222
 //上面代码通过方括号结构和Object.defineProperty，将对象的属性名指定为一个Symbol值。
 //注意，Symbol值作为对象属性名时，不能用点运算符，使用中括号是注意使用引号和不用引号的区别
 var mySymbol = Symbol();
 var a = {};
 a.mySymbol = 'Hello!';
-a[mySymbol] // undefined
-a['mySymbol'] // "Hello!"
+a[mySymbol]  // undefined
+a['mySymbol']  // "Hello!"
 //上面代码中，因为点运算符后面总是字符串，所以不会读取mySymbol作为标识名所指代的那个值，导致a的属性名实际上是一个字符串，而不是一个
 //Symbol值。
 
